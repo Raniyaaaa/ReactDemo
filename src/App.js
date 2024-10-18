@@ -8,9 +8,12 @@ const App =()=> {
     { id: "3", date: new Date(2023, 10, 11), title: "Pen", price: 1 },
     { id: "4", date: new Date(2023, 1, 14), title: "Laptop", price: 200 },
 ];
+  const savedDetailsHandler=(details)=>{
+    console.log(details);
+  }
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={savedDetailsHandler}/>
       <Expenses expenses={expenses}></Expenses>
     </div>
   );
