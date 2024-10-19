@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Expenses from "./Components/Expenses/Expenses";
 import NewExpense from "./Components/NewExpense/NewExpense";
+
 const App =()=> {
   const [expenses,setNewExpense]= useState([
     { id: "1", date: new Date(2023, 7, 15), title: "Insurance", price: 100 },
