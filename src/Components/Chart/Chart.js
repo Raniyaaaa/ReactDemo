@@ -28,14 +28,14 @@ import "./Chart.css";
         ChartsData[expense.date.getMonth()].expenseValue += expense.price;
     }
 
-    return<div>
+    return<div className="chart">
         {ChartsData.map((monthData)=>{
-            return <ChartBar
+            return( <ChartBar
                 key={monthData.expenseMonth}
                 label={monthData.expenseMonth}
                 value={monthData.expenseValue}
                 maxValue={maxValue}
-            />
+            />)
         })}
     </div>
  }
